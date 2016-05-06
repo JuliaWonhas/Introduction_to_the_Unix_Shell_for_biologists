@@ -329,7 +329,7 @@ To remove a folder use the parameter `-r` (*recursive*):
 
 Topics:
 
-* `less` / `more`
+* `less`
 * `cat`
 * `echo`
 * `head`
