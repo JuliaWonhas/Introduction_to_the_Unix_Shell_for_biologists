@@ -148,18 +148,17 @@ universe in which you can do whatever you want. In here we will
 learn how to work with paths. A file or folder can be addressed
 either with its *absolute* or *relative path*.
 
-Assuming you are in this
-folder (`/home/ubuntu/`) the relative path to the folder is simply
-`unix_course_files`. You can get the content of the folder listed by
-calling `ls` like this:
+Assuming you are in this folder (`/home/ubuntu/`) the relative path to
+the folder you cloned earlier is simply `introduction_to_the_unix_shell_for_biologists`.
+You can get the content of the folder listed by calling `ls` like this:
 
-    $ ls unix_course_files
+    $ ls introduction_to_the_unix_shell_for_biologists
    
 This is the so called *relative path* as it is relative to the current work
 directory `/home/ubuntu/`. The *absolute path* would start with a `/`
-and is `/home/ubuntu/unix_course_files`. Call `ls` like this:
+and is `/home/ubuntu/introduction_to_the_unix_shell_for_biologists`. Call `ls` like this:
 
-    $ ls /home/ubuntu/unix_course_files
+    $ ls /home/ubuntu/introduction_to_the_unix_shell_for_biologists
 
 There are some conventions regarding *relative* and *absolute paths*. One
 is that a dot (`.`) represents the current folder. The command
@@ -191,14 +190,14 @@ current location in the file system.
 Now as we know where we are and what is there we can start to change
 our location. For this we use the command `cd` (change directory). If
 you are in your home directory `/home/ubuntu/` you can go into the
-folder `unix_course_files` by typing
+folder `introduction_to_the_unix_shell_for_biologists` by typing
 
-    $ cd unix_course_files
+    $ cd introduction_to_the_unix_shell_for_biologists
 
 After that call `pwd` to make sure that you are in the correct folder.
 
     $ pwd 
-    /home/ubuntu/unix_course_files
+    /home/ubuntu/introduction_to_the_unix_shell_for_biologists
 
 To go back into your home directory you have different options. Use
 the *absolute path*
