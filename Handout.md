@@ -1,17 +1,17 @@
 % Introduction to the Unix shell for biologists
-% Konrad U. Förstner
-% 
+% original by Konrad U. Förstner
+% modified by Markus J. Ankenbrand
 
 ![CC-BY](by.png)\
 
-This work by Konrad Förstner is licensed under a [Creative Commons
+The original work by Konrad Förstner is licensed under a [Creative Commons
 Attribution 4.0 International
-License](https://creativecommons.org/licenses/by/4.0/).
+License](https://creativecommons.org/licenses/by/4.0/) so is this modified version by Markus J. Ankenbrand.
 
 The source code can be found at:
 
-[https://github.com/konrad/Introduction_to_the_Unix_Shell_for_biologists/
-	](https://github.com/konrad/Introduction_to_the_Unix_Shell_for_biologists/)
+* original: [https://github.com/konrad/Introduction_to_the_Unix_Shell_for_biologists/](https://github.com/konrad/Introduction_to_the_Unix_Shell_for_biologists/)
+* modified: [https://github.com/iimog/Introduction_to_the_Unix_Shell_for_biologists/](https://github.com/iimog/Introduction_to_the_Unix_Shell_for_biologists/)
 
 # Motivation and background
 
