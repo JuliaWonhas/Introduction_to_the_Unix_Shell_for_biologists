@@ -28,7 +28,10 @@ is the case for many bioinformatical tools.
 
 During this course all of you are working on Ubuntu (version 16.04)
 which is a widely used GNU/Linux distribution.
-The example files for this tutorial are located in the `unix_course_files` folder.
+To get started execute the following command in a terminal:
+    $ git clone https://github.com/iimog/Introduction_to_the_Unix_Shell_for_biologists/
+Do not type the `$` sign it just indicates the beginning of user input.
+This command will clone the repository with everything you need for this tutorial.
 
 # The basic anatomy of a command line call
 
@@ -141,9 +144,9 @@ administrator of the system. Normal users do not have the permission to
 make changes here. Currently your home directory is your little
 universe in which you can do whatever you want. In here we will
 learn how to work with paths. A file or folder can be addressed
-either with its *absolute* or *relative path*. As you have
-downloaded and decompressed the test data you should have a
-folder `unix_course_files` located in your home folder. Assuming you are in this
+either with its *absolute* or *relative path*.
+
+Assuming you are in this
 folder (`/home/ubuntu/`) the relative path to the folder is simply
 `unix_course_files`. You can get the content of the folder listed by
 calling `ls` like this:
