@@ -28,12 +28,8 @@ is the case for many bioinformatical tools.
 
 # Work environment and test files
 
-During this course all of you are working on Ubuntu (version 14.04)
-which is a widely used GNU/Linux distribution. The systems boots from
-a USB stick which offers you to run a live system or to install Ubuntu
-on your computer. We will run the live mode which will not change the
-system installed on your PC. After shutting the live system down and
-removing the stick everything on the computer will be as before. 
+During this course all of you are working on Ubuntu (version 16.04)
+which is a widely used GNU/Linux distribution.
 
 To get test data click on the `Dash` button on the top left of your
 screen, type `terminal` and click on the Terminal icon. You will learn
