@@ -29,7 +29,9 @@ is the case for many bioinformatical tools.
 During this course all of you are working on Ubuntu (version 16.04)
 which is a widely used GNU/Linux distribution.
 To get started execute the following command in a terminal:
+
     $ git clone https://github.com/iimog/Introduction_to_the_Unix_Shell_for_biologists/
+
 Do not type the `$` sign it just indicates the beginning of user input.
 This command will clone the repository with everything you need for this tutorial.
 
