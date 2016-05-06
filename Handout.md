@@ -140,7 +140,7 @@ the root folder). Those are more important if you are the
 administrator of the system. Normal users do not have the permission to
 make changes here. Currently your home directory is your little
 universe in which you can do whatever you want. In here we will
-learn how work with paths. A file or folder can be addressed
+learn how to work with paths. A file or folder can be addressed
 either with its *absolute* or *relative path*. As you have
 downloaded and decompressed the test data you should have a
 folder `unix_course_files` located in your home folder. Assuming you are in this
