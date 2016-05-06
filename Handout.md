@@ -529,41 +529,6 @@ lines. Please write it in one line in the shell and remove the `\`).
          Salmonella_enterica_serovar_Typhimurium_SL1344_uid86645/\
          NC_016810.fna
 
-Additionally, we download the annotation in GFF format of the same replicon:
-
-    wget ftp://ftp.ncbi.nih.gov/genomes/Bacteria/\
-         Salmonella_enterica_serovar_Typhimurium_SL1344_uid86645/\
-         NC_016810.gff
-
-## Counting the number of features
-
-Use `less` to have a look at `NC_016810.gff`. It is a tabular-separated
-file. The first 5 lines start with `#` and are called
-header. Then several lines with 9 columns follow. The third column
-contains the type of the entry (gene, CDS, tRNA, rRNA, etc). If we
-want to know the numbers of tRNA entries we could try to apply `grep`
-and use `-c` to count the number of matching lines.
-
-    $ grep -c tRNA NC_016810.gff
-
-This leads to a suspiciously large number. The issue is that the
-string `tRNA` also occurs in the attribute column (the 9th
-column). We just want to select lines with a match in the third column.
-This can be achieved by combining `cut` and `grep`. 
-
-    $ cut -f 3 NC_016810.gff | grep -c tRNA
-
-To get the number of entries for all other features we could just
-replace the `tRNA` e.g. by `rRNA`. But we can also get the number for
-all of them at once using this constellation:
-
-    $ grep -v "#" NC_016810.gff | cut -f 3 | sort | uniq -c
-
-Try to understand what we did here. You can use a similar call to
-count the number genes on the plus and minus strand:
-
-    $ cut -f 3,7 NC_016810.gff | grep gene | sort | uniq -c
-
 ## Calculate the GC content of a genome
 
 Let us assume the GC content of the genome is not known to us. We can
@@ -590,59 +555,16 @@ formula into the calculator `bc`.
 
     echo "scale=5; 2332503/(2332503+2545509)*100" | bc
 
-## Multiple sequence alignment with `muscle`
+## Quality controll with fastqc
 
 We cannot only work with the default tools of the Unix shell but
 additionally have now access to a plethora of command line
-tools. Let's assume we want to perform a multiple alignment of the
-members of the [GlmZ
-family](http://rfam.xfam.org/family/GlmZ_SraJ). We choose
-[`muscle`](http://www.drive5.com/muscle/) for this purpose. Its web
-site offers compiled binaries which means we only have to download the
-containing archive via (again, please write it in one line in the
-shell and remove the `\`)
+tools. Let's assume we want to perform a quality control analysis
+of multiple sequencing files.
+We choose [`fastqc`](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) for this purpose.
+On the current machine this tool is already installed.
 
-    $ wget http://www.drive5.com/muscle/downloads3.8.31/\
-           muscle3.8.31_i86linux64.tar.gz
 
-and extract it:
-
-    $ tar xfz muscle3.8.31_i86linux64.tar.gz
-
-As we might need this tool more often (this is purely hypothetical as
-once you shutdown the live system any data will be gone) we generate a
-folder `bin` in our home directory. This is by convention a place
-were those programs are stored.
-
-    $ mkdir bin
-
-Then we move the tool into the folder and rename it:
-
-    $ mv muscle3.8.31_i86linux64 ~/bin/muscle
-
-and clean up a little bit:
-
-    $ rm muscle3.8.31_i86linux64.tar.gz
-
-Now we download the sequences of the RNAs which we want to align
-(again, please write the URL in one line and remove the `\`).
-
-    $ wget -O RF00083.fa "http://rfam.xfam.org/family/RF00083/\
-      alignment?acc=RF00083&format=fastau&download=1"
-
-Have a look at the content of the file using `less` or `cat`.
-
-If you call `muscle` without anything you will get a list of parameters. 
-
-    $ ~/bin/muscle
-
-Please be aware that we have to give the path to `muscle`.
-
-We want to specify an input file using (`-in`) and an output file (`-out`):
-
-    $ ~/bin/muscle -in RF00083.fa -out RF00083_aligned.fa
-
-Now we have the alignments stored in `RF00083_aligned.fa`.
 
 # Very, very basic scripting
 
