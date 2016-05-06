@@ -2,9 +2,7 @@
 % original by Konrad U. Förstner
 % modified by Markus J. Ankenbrand
 
-![CC-BY](by.png)\
-
-The original work by Konrad Förstner is licensed under a [Creative Commons
+![CC-BY](by.png) The original work by Konrad Förstner is licensed under a [Creative Commons
 Attribution 4.0 International
 License](https://creativecommons.org/licenses/by/4.0/) so is this modified version by Markus J. Ankenbrand.
 
@@ -30,24 +28,7 @@ is the case for many bioinformatical tools.
 
 During this course all of you are working on Ubuntu (version 16.04)
 which is a widely used GNU/Linux distribution.
-
-To get test data click on the `Dash` button on the top left of your
-screen, type `terminal` and click on the Terminal icon. You will learn
-later what you are doing but for the moment just type the following
-commands into the command line interface. Do not write the dollar
-sign(`$`). It just indicates the so called prompt:
-
-    $ wget http://data.imib-zinf.net/unix_course_files.tar.gz
-    $ tar xfz unix_course_files.tar.gz
-    $ rm unix_course_files.tar.gz
-
-If this URL is not existing anymore you can use the `Makefile` which
-is located in the repository of this manuscript to generate the test
-data:
-
-    $ export GIT_URL=https://raw.githubusercontent.com/konrad
-	$ wget $GIT_URL/Introduction_to_the_Unix_Shell_for_biologists/master/Makefile
-    $ make example_files
+The example files for this tutorial are located in the `unix_course_files` folder.
 
 # The basic anatomy of a command line call
 
