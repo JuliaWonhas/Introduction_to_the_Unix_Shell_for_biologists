@@ -93,15 +93,10 @@ currently working with Bash (**B**ourne-**a**gain **sh**ell). Bash has several k
 improve the interaction. Here is a small selection:
 
 * Ctrl-c - Stop the command
+* Tab - extend commands and file/folder names
 * Ctlr-↑ - Go backward in command history
 * Ctlr-↓ - Go forward in command history
-* Ctrl-a - Jump to the beginning of a line
-* Ctrl-e - Jump to the end of a line
-* Ctrl-u - Remove everything before the cursor position
-* Ctrl-k - Remove everything after the cursor position
-* Ctrl-l - Clean the screen
 * Ctrl-r - Search in command history
-* Tab - extend commands and file/folder names
 
 # Files, folders, locations
 
@@ -111,8 +106,6 @@ Topics:
 * `pwd`
 * `cd`
 * `mkdir`
-* Relative vs. absolute path
-* `~/` 
 
 In this part you will learn how to navigate through the file system,
 explore the content of folders and create folders.
