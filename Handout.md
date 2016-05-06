@@ -117,14 +117,15 @@ this, call the program `pwd` which stands for **p**rint **w**orking **d**irector
     $ pwd
     /home/ubuntu
 
-The default user of the Ubuntu live system is called `ubuntu`. In
-general each user has a folder with its user name located inside
-the folder `home`. The next command we need and which has been
-already mentioned above is `ls`. It simply lists the content of a
-folder. If you call it without any arguments it will output the content
-of the current folder. Using `ls` we want to get a rough overview of what
-a common Unix file system tree looks like and learn how to address
-files and folders. The root folder of a systems starts with `/`. Call
+Instead of `ubuntu` there will be your username after `/home/`.
+This is your personal home directory. In general each user has a
+folder with its user name located inside the folder `home`.
+The next command we need and which has been already mentioned above is `ls`.
+It simply lists the content of a folder. If you call it without any
+arguments it will output the content of the current folder.
+Using `ls` we want to get a rough overview of what a common Unix
+file system tree looks like and learn how to address files and folders.
+The root folder of a systems starts with `/`. Call
 
     $ ls /
 
