@@ -562,8 +562,22 @@ additionally have now access to a plethora of command line
 tools. Let's assume we want to perform a quality control analysis
 of multiple sequencing files.
 We choose [`fastqc`](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) for this purpose.
-On the current machine this tool is already installed.
+On the current machine this tool is already installed. Try:
 
+    $ fastqc --help
+
+To get some example data change into your home directory and clone the course files:
+
+    $ git clone /workshop/analysis-script.git
+
+Now you can run fastqc on a real sequencing file:
+
+    $ fastqc analysis-script/PoJ118_S214_L001_R1_001.fastq.gz
+
+The results will be in `analysis-script/PoJ118_S214_L001_R1_001_fastqc.html`
+Open with:
+
+    $ firefox analysis-script/PoJ118_S214_L001_R1_001_fastqc.html
 
 
 # Very, very basic scripting
@@ -572,10 +586,10 @@ One huge advantage of the Unix shell is that you can script
 actions. For example you can write the command for the multiple
 alignment into a file e.g. using `echo`:
 
-    $ echo "~/bin/muscle -in  RF00083.fa -out RF00083_aligned.fa" \
-       > run_me.sh
+    $ echo "fastqc analysis-script/PoJ118_S214_L001_R1_001.fastq.gz" > run_me.sh
+    $ echo "firefox analysis-script/PoJ118_S214_L001_R1_001_fastqc.html" >> run_me.sh
 
-If you want to run the command in that script you can call the script
+If you want to run the commands in that script you can call the script
 in the following manner:
 
     $ bash run_me.sh
